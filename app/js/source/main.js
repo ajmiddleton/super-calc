@@ -131,9 +131,8 @@
   }
 
   function sigma(){
-    var $arr = $('#box .pushedNums');
     var sum = 0;
-    $arr.each(function(){
+    $('#box .pushedNums').each(function(){
       var x = $(this).text() * 1;
       sum += x;
     });

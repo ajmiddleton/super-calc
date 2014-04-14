@@ -1,0 +1,38 @@
+.button {
+  border: 1px solid #cccccc;
+  padding: 5px;
+  text-align: center;
+}
+.button:hover {
+  background-color: #F07D65;
+}
+.number {
+  background-color: #506D7D;
+}
+.number:hover {
+  background-color: #94CCB9;
+}
+.operator {
+  background-color: #FFB170;
+}
+.operator:hover {
+  background-color: #F07D65;
+}
+#display {
+  text-align: right;
+}
+table {
+  background-color: #333333;
+  color: white;
+  width: 200px;
+  float: left;
+}
+#content-container {
+  float: left;
+  width: 60%;
+}
+#box {
+  width: 200px;
+  padding: 10px;
+  display: inline-block;
+}

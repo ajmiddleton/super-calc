@@ -76,58 +76,47 @@
 
   function compute(){
     var type = this.textContent;
+    var x = getFirst();
+    var y = getSecond();
+    var result;
 
     switch(type){
-    case '+': add();
+    case '+': result = add(x,y);
       break;
-    case '-': sub();
+    case '-': result = sub(x,y);
       break;
-    case 'x': mult();
+    case 'x': result = mult(x,y);
       break;
-    case '/': quot();
+    case '/': result = quot(x,y);
       break;
-    case 'E': sigma();
+    case 'E': result = sigma();
       break;
-    case 'P': expo();
+    case 'P': result = expo(x,y);
       break;
-    case 'S': sqr();
+    case 'S': result = sqr(x);
       break;
-    case '!': fac();
+    case '!': result = fac(x);
       break;
 
     }
+
+    printR(result);
   }
 
-  function add(){
-    var x = getFirst();
-    var y = getSecond();
-
-    var sum = x + y;
-    printR(sum);
+  function add(x,y){
+    return x + y;
   }
 
-  function sub(){
-    var x = getFirst();
-    var y = getSecond();
-
-    var dif = x - y;
-    printR(dif);
+  function sub(x,y){
+    return x - y;
   }
 
-  function mult(){
-    var x = getFirst();
-    var y = getSecond();
-
-    var prod = x * y;
-    printR(prod);
+  function mult(x,y){
+    return x * y;
   }
 
-  function quot(){
-    var x = getFirst();
-    var y = getSecond();
-
-    var q = x / y;
-    printR(q);
+  function quot(x,y){
+    return x / y;
   }
 
   function sigma(){
@@ -137,33 +126,25 @@
       sum += x;
     });
 
-    printR(sum);
+    return sum;
   }
 
-  function expo(){
-    var x = getFirst();
-    var y = getSecond();
-
-    var p = Math.pow(x,y);
-    printR(p);
+  function expo(x,y){
+    return Math.pow(x,y);
   }
 
-  function sqr(){
-    var x = getFirst();
-
-    var sq = Math.sqrt(x);
-    printR(sq);
+  function sqr(x){
+    return Math.sqrt(x);
   }
 
-  function fac(){
-    var x = getFirst();
+  function fac(x){
     var f = 1;
 
     for(var i=1; i <= x; i++){
       f *= i;
     }
 
-    printR(f);
+    return f;
   }
 
   function printR(str){

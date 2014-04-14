@@ -8,3 +8,4 @@ It uses:
 * Grunt
 * JSHint
 * Node.js
+* Pretty Cool Stuff
